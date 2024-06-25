@@ -4,6 +4,8 @@ To learn more about networking communication, let's try the HTTPS protocol and h
 Install Postman: https://www.postman.com/. Explore MARVEL API https://developer.marvel.com/documentation/getting_started
 Create an HTTPS call to at least 3 available API on MARVEL, and paste the results here:
 
+3 API on Marvel - Thanos, Galactus & Onslaught.
+
 First API call result - Thanos
 ```sh
 {
