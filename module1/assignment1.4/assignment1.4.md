@@ -52,6 +52,8 @@ Ref: https://www.csoonline.com/article/567795/marriott-data-breach-faq-how-did-i
     of sensitive data. This highlights the need for continuous security
     improvements and robust monitoring in the modern ever evolving landscape
 ```
+Ref: https://coverlink.com/case-study/marriott-data-breach/
+https://www3.cs.stonybrook.edu/~ise331/Slides/Marriott%20Data%20Breach.pdf
 
 
 3. What was the impact? - Alan
