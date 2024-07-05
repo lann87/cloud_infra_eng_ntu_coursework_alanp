@@ -35,15 +35,16 @@ Cons of Cloud Storage:
 
 Group Assignment Summary:
 ```sh
-Cloud storage is like renting a digital storage unit. You can store files, objects,
-or raw data blocks. It's great because it's reliable, grows with your needs, and 
-you can access it from anywhere. You don't need to buy or maintain your own storage
-equipment.
-But it's not perfect. It can get expensive if you store a lot. Some laws make it 
-tricky to store certain data in the cloud. You need good internet to use it. Moving
-your stuff to a different service can be costly. Also, you can't touch the actual
-machines storing your data.
-Think of it like this: It's convenient, but you're trading some control for that
-convenience. It works well for many, but you need to think carefully about what you
-need before jumping in.
+-   Cloud storage is like renting a digital storage unit. You can store files,
+    objects, or raw data blocks. It's great because it's reliable, grows with your 
+    needs, and you can access it from anywhere. You don't need to buy or maintain
+    your own storage equipment.
+    But it's not perfect. It can get expensive if you store a lot. Some laws make
+    it tricky to store certain data in the cloud. You need good internet to use it.
+    Moving your stuff to a different service can be costly. Also, you can't touch 
+    the actual machines storing your data.
+    
+    Think of it like this: It's convenient, but you're trading some control for
+    that convenience. It works well for many, but you need to think carefully about
+    what you need before jumping in.
 ```
