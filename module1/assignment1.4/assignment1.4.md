@@ -25,9 +25,32 @@ when it was assigned to.
 Ref: https://www.csoonline.com/article/567795/marriott-data-breach-faq-how-did-it-happen-and-what-was-the-impact.html
 
 
-2. How did it happen?
+2. How did it happen? - Alan
 ```sh
+-   Attack Vector and Malware Characteristics
+    - A Remote Access Trojan(RAT) was deployed in Starwood's guest
+    reservation system
+    - RAT provided persistent unauthorized remote access to the network,
+    evaded detection for 4 years which suggested of advanced evasion
+    techniques used in it
+    - Intrusion method of exploiting vulnerabilities in Starwood's network
+    infrastructure, high possibility of using social engineering or phishing
+    to gain access
 
+-   Technical Failures, Detection and Aftermath
+    -   Inadequate network segmentation that failed to create multiple secure
+    zones, lack of encryption and intrusion detection within the Starwood 
+    network, poorly management of Access Control that all contributed to this
+    breach
+    -   Marriott's internal security tool flagged the suspicious activities
+    in sept 18, but response of decrypting and analysis took several months
+    -   Up to 500 million guest records data are compromised from accessing
+    the Starwood's guest reservation database
+
+-   This breach shows the importance of a complete multilayered cybersecurity
+    system, especially in large scale IT infrastructure handling large amount
+    of sensitive data. This highlights the need for continuous security
+    improvements and robust monitoring in the modern ever evolving landscape
 ```
 
 
@@ -105,13 +128,4 @@ Marriot failed in all these areas.
 ```
 Ref: https://www.computerweekly.com/news/252453521/Marriott-data-breach-highlights-basic-failings
 https://www.fortinet.com/resources/cyberglossary/defense-in-depth
-
-
-
-
-
-
-
-
-
 
