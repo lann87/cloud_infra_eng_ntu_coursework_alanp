@@ -44,7 +44,7 @@ Group Assignment Summary:
     Moving your stuff to a different service can be costly. Also, you can't touch 
     the actual machines storing your data.
     
-    Think of it like this: It's convenient, but you're trading some control for
+-   Think of it like this: It's convenient, but you're trading some control for
     that convenience. It works well for many, but you need to think carefully about
     what you need before jumping in.
 ```
