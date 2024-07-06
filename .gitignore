@@ -164,6 +164,6 @@ cython_debug/
 #Files below here are place under .gitignore to keep the directory tidy.
 module1/assignment1.1/README.md
 module1/assignment1.1/assignment1.1.ods
-
+docker_startup.sh
 
 
