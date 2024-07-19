@@ -1,6 +1,6 @@
 # 1.12 Disaster Recovery - Ecommerce
 ## Group: Azmi Maniku, Andy Liew, Alif Yusri and Alan Peh
-**Work with your group to define your own business and your own recovery plan based on discussed threats that might happen to your business
+**Work with your group to define your own business and your own recovery plan based on discussed threats that might happen to your business**
 
 ### Define your business at a high-level:  
 Our business is a large-scale Ecommerce platform operating in Singapore and Southeast Asia. The platform connects a large number of buyers and sellers, offering a wide range of product. and services across many categories. Key features:  
