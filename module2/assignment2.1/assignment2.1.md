@@ -15,7 +15,6 @@
 
 2. **Compare and contrast the benefits and limitations of each model, including cost, scalability, security, and flexibility.**
 
-|---------------------------|----------------------------------|----------------------------------|-------------------------------------------|
 |                           | Cloud                            | Hybrid                           | Traditional (On-prem)                     |
 |---------------------------|----------------------------------|----------------------------------|-------------------------------------------|
 | **Cost**                  | Lower costs                      | Cost-efficient                   | High Upfront Cost for hardware. Also cost |
