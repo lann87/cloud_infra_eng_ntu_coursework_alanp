@@ -81,8 +81,8 @@
     - Rapid deployment to update the e-commerce site, reducing time-to-market
 - Overall, this setup is more well-rounded in terms of flexibility, cost-effectiveness, scalability, performance, ease of management and innovation-friendly compared to alternatives, making it ideal for app-first businesses in today's fast-paced digital marketplace. With cloud, e-commerce companies can easily adapt to market changes and gain valuable insights with cutting edge machine learning and AI powered services into consumer behaviour, setting themselves up for success in the competitive online retail world.
 
-Reference:
-https://sptel.com/on-premise-vs-cloud-computing/
-https://www.commvault.com/glossary-library/on-premises-cloud-and-hybrid#:~:text=On%2Dpremises%20solutions%20involve%20hosting,premises%20and%20cloud%2Dbased%20systems.
-https://www.cleo.com/blog/knowledge-base-on-premise-vs-cloud
-https://www.aztechit.co.uk/blog/cloud-computing-vs-traditional#:~:text=Traditional%20computing%20involves%20the%20use,%2C%20storage%2C%20and%20processing%20power.
+Reference:  
+https://sptel.com/on-premise-vs-cloud-computing/  
+https://www.commvault.com/glossary-library/on-premises-cloud-and-hybrid#:~:text=On%2Dpremises%20solutions%20involve%20hosting,premises%20and%20cloud%2Dbased%20systems.  
+https://www.cleo.com/blog/knowledge-base-on-premise-vs-cloud  
+https://www.aztechit.co.uk/blog/cloud-computing-vs-traditional#:~:text=Traditional%20computing%20involves%20the%20use,%2C%20storage%2C%20and%20processing%20power.  
