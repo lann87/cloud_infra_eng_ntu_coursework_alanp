@@ -1,3 +1,4 @@
+# Contains variable data for ec2/vpc/security groups
 variable "ami_id" {
   description = "AMI ID"
   type = string
