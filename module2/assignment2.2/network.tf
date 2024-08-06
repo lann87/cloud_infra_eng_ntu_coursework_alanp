@@ -33,18 +33,18 @@ resource "aws_security_group" "alanp-sg-a2" {
         ipv6_cidr_blocks    = ["::/0"]
     }
 }
-//
+
 # Data Resource for PC
-#data "aws_vpc" "alanp-vpc-a2" {
+# data "aws_vpc" "alanp-vpc-a2" {
 #  filter {
 #    name = "tag:Name"
 #    values = [var.vpc_name]
 #  }
-#}
-#
-#data "aws_subnet" "alanp-public-subnet-1a" {
+# }
+
+# data "aws_subnet" "alanp-public-subnet-1a" {
 #  filter {
 #    name = "tag:Name"
 #    values = ["public-subnet-1a"]
 #  }
-#}
+# }

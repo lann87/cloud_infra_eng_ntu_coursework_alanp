@@ -9,7 +9,7 @@ resource "aws_instance" "alannp-ec2-var-a2" {
   vpc_security_group_ids = [aws_security_group.alanp-sg-a2.id]
 
   tags = {
-    Names = var.ec2_name
+    Name = var.ec2_name
   }
 }
 
