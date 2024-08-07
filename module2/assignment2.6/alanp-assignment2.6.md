@@ -38,5 +38,5 @@ In conclusion AWS IAM is indeed a powerful tool to manage access to AWS resource
 > Create a new IAM user with the syntax YOUR NAME + "-temp-user" suffix e.g. luqman-temp-user.  
 > Grant this new user you have created access to (i) create, view and delete EC2 instances, (ii) create and view S3 buckets only and (iii) view RDS instances only.  
 
-![Alt Text][https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.6/alanp-temp-user_policySC.png]
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.6/alanp-temp-user_policySC.png)
 
