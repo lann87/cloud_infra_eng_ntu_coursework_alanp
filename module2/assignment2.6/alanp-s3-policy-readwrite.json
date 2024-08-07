@@ -1,0 +1,39 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*",
+                "s3:Describe*",
+                "s3-object-lambda:Get*",
+                "s3-object-lambda:List*",
+                "s3:CreateAccessGrant",
+                "s3:CreateAccessGrantsInstance",
+                "s3:CreateAccessGrantsLocation",
+                "s3:CreateAccessPoint",
+                "s3:CreateAccessPointForObjectLambda",
+                "s3:CreateBucket",
+                "s3:CreateJob",
+                "s3:CreateMultiRegionAccessPoint",
+                "s3:CreateStorageLensGroup",
+                "s3:DeleteAccessGrant",
+                "s3:DeleteAccessGrantsInstance",
+                "s3:DeleteAccessGrantsInstanceResourcePolicy",
+                "s3:DeleteAccessGrantsLocation",
+                "s3:DeleteAccessPoint",
+                "s3:DeleteAccessPointForObjectLambda",
+                "s3:DeleteBucket",
+                "s3:DeleteBucketWebsite",
+                "s3:DeleteMultiRegionAccessPoint",
+                "s3:DeleteObject",
+                "s3:DeleteObjectVersion",
+                "s3:DeleteStorageLensConfiguration",
+                "s3:DeleteStorageLensGroup",
+                "s3:ReplicateDelete"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
