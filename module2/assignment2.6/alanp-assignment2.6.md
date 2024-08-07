@@ -15,22 +15,22 @@ The objective of this assignment is to gain a deeper understanding of AWS permis
     - Allows the ability to create and manage AWS user, groups, and use permissions to control access to AWS resources.  
     - IAM is free to use and integrated with many AWS services, making it a useful tool to manage cloud security.  
   
-**Main components.**
+**Main components.**  
     1. Identities  
         - Users: Folks like us.  
         - Groups: Collection of users that shares the same permission.  
         - Roles: Providing temporary credentials.  
-    2. Policies
+    2. Policies  
         - Managed Policies: Predetermined by User(us) or AWS.  
-        - Inline Policies: One-use directly applies to user, group or role.
-    3. Permission
-        - Allow/Deny: Access to actions or resources and Deny take precedence over Allow.
+        - Inline Policies: One-use directly applies to user, group or role.  
+    3. Permission  
+        - Allow/Deny: Access to actions or resources and Deny take precedence over Allow.  
 
-**Challenges Encountered**
-    1. Complexities in policy management when it comes to access privilege level, different type of precedence between component and in particular with large cloud environment.
+**Challenges Encountered**  
+    1. Complexities in policy management when it comes to access privilege level, different type of precedence between component and in particular with large cloud environment.  
     2. Policy validation is particularly a challenge as it has aspect of being repetitive and mundance, automation could be the possible solution and it's something maybe the instructors can address on.
 
-**Summary**
+**Summary**  
 In conclusion AWS IAM is indeed a powerful tool to manage access to AWS resources, its benefits in terms of security and scalability makes it indispensable for organisations using AWS Cloud. Proper usage, monitoring, and implementation of industry best practices will be essential for effective IAM implementation
 
 
