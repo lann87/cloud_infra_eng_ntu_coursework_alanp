@@ -1,7 +1,8 @@
 # Cloud Engineering Course - NTU SCTP  
-### 10/08/2024 - Classroom  
+### Alan 10/08/2024 - Classroom  
 
 ## Kubernetes foundation and deployment  
+In this class we were taught the best practices on kubernetes deployment in the industry, understood the yaml format for k8s, and a deployment of a 2 pod desired state k8s.
 
 ### Single pod simple k8s  
 
