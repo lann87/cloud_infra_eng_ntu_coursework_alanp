@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alanp-nginx-pod
+spec:
+  containers:
+  - name: alanp-nginx-pod
+    image: nginx:latest
+    ports:
+    - containerPort: 80
