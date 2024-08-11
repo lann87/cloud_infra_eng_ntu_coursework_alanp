@@ -17,7 +17,7 @@ spec:
     ports:
     - containerPort: 80
 ```
-[Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/classroom_f2f/k8s_aug10/singlepod_simple_k8s.png)
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/classroom_f2f/k8s_aug10/singlepod_simple_k8s.png)
 
 ### Dual pod deployment k8s  
 
@@ -43,4 +43,4 @@ spec:
         - containerPort: 80
 ```
 
-[Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/classroom_f2f/k8s_aug10/2pod_deployment_k8s.png)
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/classroom_f2f/k8s_aug10/2pod_deployment_k8s.png)
