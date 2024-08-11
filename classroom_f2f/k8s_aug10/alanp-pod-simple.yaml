@@ -1,10 +1,10 @@
-apiVersion: v1
-kind: Pod
-metadata:
+apiVersion: v1 # Specifies the k8s API ver
+kind: Pod # Defines resource type as "Pod"
+metadata: # Metadata for the pod
   name: alanp-nginx-pod
-spec:
-  containers:
+spec: # Describes the desired state of the pod
+  containers: # Single container using nginx latest image
   - name: alanp-nginx-pod
     image: nginx:latest
     ports:
-    - containerPort: 80
+    - containerPort: 80 # Container listen in on this port
