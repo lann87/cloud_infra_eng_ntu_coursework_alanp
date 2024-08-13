@@ -16,10 +16,10 @@
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.7/ss_myIP.png)
 
 **Security group attributes**
-[Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.7/ss_tf_sgGroup_attributes.png)
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.7/ss_tf_sgGroup_attributes.png)
 
 **Security group launched using Terraform**
-[Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.7/ss_tf-apply_sg_asmt.png)
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.7/ss_tf-apply_sg_asmt.png)
 
 Terraform HCL files:
 1.  compute
