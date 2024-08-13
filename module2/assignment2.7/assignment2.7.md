@@ -4,13 +4,13 @@
 
 ## Brief:  
 **The objective of this assignment is to gain a deeper understanding of AWS security groups**
-> Instructions:
->    Open AWS Console
->    Create a new EC2 instance with a new security group:
->        Name: “"yourname"SSHSecurityGroup”
->        Description: “Security Group To Allow SSH from my IP range(s)”
->        VPC: < Choose Any >
->        Inbound Rules: - Type: SSH - Protocol: TCP - Source: My IP
+Instructions:
+    1.  Open AWS Console  
+    2.  Create a new EC2 instance with a new security group:  
+        a.  Name: “"yourname"SSHSecurityGroup”  
+        b.  Description: “Security Group To Allow SSH from my IP range(s)”  
+        c.  VPC: < Choose Any >  
+        d.  Inbound Rules: - Type: SSH - Protocol: TCP - Source: My IP  
 
 **Finding out address of My IP:**  
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.7/ss_myIP.png)
