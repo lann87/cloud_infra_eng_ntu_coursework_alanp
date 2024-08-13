@@ -1,10 +1,10 @@
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)
 # Assignment 2.7 - Security Groups
-### Individual assignment
+### Individual assignment - Alan Peh
 
-## Brief:  
-**The objective of this assignment is to gain a deeper understanding of AWS security groups**
-Instructions:
+### Brief:  
+**The objective of this assignment is to gain a deeper understanding of AWS security groups**  
+Instructions:  
     1.  Open AWS Console  
     2.  Create a new EC2 instance with a new security group:  
         a.  Name: “"yourname"SSHSecurityGroup”  
