@@ -2,7 +2,7 @@
 # Assignment 2.10 - CDN & AZs
 ### Individual CloudFront deployment & theoretical CDN assignment - Alan Peh
 
-1. Hands-on S3 assignment:  
+## 1. Hands-on assignment - CloudFront /w S3 deployment:  
 - Deployment of a staticpage on CloudFront  
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.10/Static-page-cloudfront.png)  
 - CloudFront console with origin pointed to S3 bucket  
@@ -10,7 +10,7 @@
 - Bucket Policy
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.10/s3-assignment210-bucketpolicy.png)  
 
-2. Theoretical assignment:  
+## 2. Theoretical assignment:  
 You will be assigned a simple topic to work on as a group by your instructor. The questions include:  
 
 - Explore the difference between AWS CloudFront and a commercial 3rd party tool like Cloudflare. In what situation would you use CloudFront over Cloudflare and vice versa?
