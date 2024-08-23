@@ -1,6 +1,6 @@
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)
 # Assignment 2.8 - Software Deployment Requirements  
-## Brief - Individual Assignment.  
+## Brief - Individual Assignment - Alan Peh
 - Discuss within your group about what is the project (e.g. banking application, e-commerce application etc.) that you will run.
 - Discuss withn your group about what methodology (e.g. Agile or waterfall or a hybrid) that you will use to run that project and why
 - When it comes to deployment, what kind of software deployment methodologies (e.g. Blue-Green, Rolling etc.) would you use and why
