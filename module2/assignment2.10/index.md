@@ -4,9 +4,11 @@
 
 1. Hands-on S3 assignment:  
 - Deployment of a staticpage on CloudFront  
-![Alt Text]()  
-- 
-
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.10/Static-page-cloudfront.png)  
+- CloudFront console with origin pointed to S3 bucket  
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.10/alanp-cloudfront-console.png) 
+- Bucket Policy
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.10/s3-assignment210-bucketpolicy.png)  
 
 2. Theoretical assignment:  
 You will be assigned a simple topic to work on as a group by your instructor. The questions include:  
