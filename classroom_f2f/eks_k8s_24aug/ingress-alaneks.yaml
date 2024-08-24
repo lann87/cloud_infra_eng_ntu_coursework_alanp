@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: alanp-eks-24aug-ingress
+ namespace: default
+spec:
+ ingressClassName: cilium
+ rules:
+ - host: "alanp-eks-24aug.sctp-sandbox.com"
+   http:
+     paths:
+     - path: / # < play with this
+       pathType: Prefix
+       backend:
+         service:
+           name: alanp-eks-24aug-flask
+           port:
+             number: 80
