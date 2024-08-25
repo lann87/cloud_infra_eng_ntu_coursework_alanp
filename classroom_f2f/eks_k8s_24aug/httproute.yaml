@@ -1,0 +1,18 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: hello-route-alanp
+spec:
+  parentRefs:
+  - name: hello-gw-alanp
+    port: 80
+  hostnames:
+  - 
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+    - name: app1-flask
+      port: 80
