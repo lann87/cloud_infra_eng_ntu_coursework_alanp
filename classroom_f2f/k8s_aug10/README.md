@@ -1,4 +1,4 @@
-# Cloud Engineering Course - NTU SCTP  
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)
 ### Alan 10/08/2024 - Classroom  
 
 ## Kubernetes foundation and deployment  
