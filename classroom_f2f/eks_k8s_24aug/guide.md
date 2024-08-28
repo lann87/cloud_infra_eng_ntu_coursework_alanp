@@ -1,7 +1,6 @@
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)   
 # Level 7 Access in Kubernetes Cluster Tutorial  
-This guide provides a comprehensive approach to achieving Level 7 access in a Kubernetes (K8s) cluster. Each step is documented to help you understand what you are doing and why it is necessary. Follow the steps below to set up your environment, create deployments, services, and configure ingress and gateways.  
-> (This guide is created by Alan Peh with course note from NTU Cloud Engineering Course, research using perplexity.ai, and going throught the guided tutorial by my instructors.)  
+This guide provides a comprehensive approach to achieving Level 7 access in a Kubernetes (K8s) cluster. Each step is documented to help you understand what you are doing and why it is necessary. Follow the steps below to set up your environment, create deployments, services, and configure ingress and gateways.   
 
 
 ## 1. Login to the Cluster  
@@ -227,5 +226,8 @@ kubectl apply -f <your-http-route-file>.yaml
 -   For gateway configurations, see the [Kubernetes Gateway Documentation](https://kubernetes.io/docs/concepts/services-networking/gateway/).   
 
 This guide should help you set up Level 7 access in your Kubernetes cluster effectively while providing a clear understanding of each step involved.
+
+*This guide was created by Alan Peh using course notes from the NTU Cloud Engineering Course, research conducted with Perplexity.ai, and by following guided tutorials provided by instructors.*
+
 
 
