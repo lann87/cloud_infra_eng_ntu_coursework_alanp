@@ -8,12 +8,12 @@ To access your Amazon EKS (Elastic Kubernetes Service) cluster, you need to upda
 
 ### Command:  
 
-```sh   
+```sh  
 aws eks update-kubeconfig --name <clustername> --region <region>
 ```  
 
 For cohort 7:   
-```sh
+```sh   
 aws eks update-kubeconfig --name CE7-test --region us-east-1
 ```  
 ### Understanding:
@@ -28,7 +28,7 @@ You will create two applications, each with a deployment and a service. Deployme
 ### App1.yaml   
 This file defines a service and a deployment for the first application.   
 
-```sh
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -64,7 +64,7 @@ spec:
 ### App2.yaml   
 This file defines a service and a deployment for the second application.   
 
-```sh
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -118,7 +118,7 @@ kubectl get ingressclass
 ```
 
 ### Create an ingress resource:  
-```sh
+```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -162,7 +162,7 @@ kubectl get gatewayclass
 kubectl get CRD
 ``` 
 ### Create a Gateway YAML file:   
-```sh
+```yaml
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
@@ -188,7 +188,7 @@ kubectl apply -f <your-gateway-file>.yaml
 ## 5. Create an HTTP Route yaml file  
 Define an HTTP route to connect the gateway to your service, specifying how requests should be handled.  
 
-```sh
+```yaml  
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:

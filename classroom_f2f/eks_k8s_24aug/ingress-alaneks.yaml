@@ -9,7 +9,7 @@ spec:
  - host: "alanp-eks-24aug.sctp-sandbox.com"
    http:
      paths:
-     - path: / # < play with this
+     - path: /
        pathType: Prefix
        backend:
          service:
