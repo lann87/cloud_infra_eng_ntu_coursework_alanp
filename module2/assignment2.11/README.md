@@ -6,8 +6,8 @@
 
 Cloud Architecture Design - Security involves creating and implementing security measures for a cloud environment. It includes defining security principles, rules, and governance for cloud services and applications. Key components are identity and access management (IAM), data protection and encryption, network and application security, and compliance with regulations. It also involves continuous monitoring, threat detection, and incident response to safeguard cloud infrastructure, data, and applications. The goal is to ensure confidentiality, integrity, and availability of resources while mitigating risks and vulnerabilities.   
 
-## 2. Choose your own system, then succinctly explain how would you implement Cloud Architecture Design - Security on your system
-
+## 2. Choose your own system, then succinctly explain how would you implement Cloud Architecture Design - Security on your system  
+   
 ### Chosen System: Ecommerce Architecture Design  
 
 ## Application Security:  
