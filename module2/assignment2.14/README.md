@@ -24,10 +24,10 @@ Cost Optimization focuses on reducing costs while maximizing efficiency in cloud
 - Utilize spot instances for non-critical workloads, such as batch jobs, where they are significantly cheaper but may be terminated if demand increases.  
 
 ### Auto-Scaling   
-Implement auto-scaling for web servers to manage traffic spikes during sales/events, ensuring resources are only used when necessary.  
+- Implement auto-scaling for web servers to manage traffic spikes during sales/events, ensuring resources are only used when necessary.  
 
 ### Serverless Architectures   
-Leverage serverless services (e.g., AWS Lambda, Google Cloud Functions) to pay only for actual usage without managing infrastructure.  
+- Leverage serverless services (e.g., AWS Lambda, Google Cloud Functions) to pay only for actual usage without managing infrastructure.  
 
 ### Data Transfer Optimization  
 - Reduce data transfer costs by using CDNs, caching, and efficient data transfer methods, which also improve response time.  
