@@ -2,7 +2,7 @@
 # Assignment 2.16 - Deployment of SNS Topic using Terraform.  
 
 ## Terraform deployment of SNS Topic as shown on CLI.  
-[Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.16/TF_sns_topic_deployment.png)  
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module2/assignment2.16/TF_sns_topic_deployment.png)  
 
 ## Terraform .tf files for deployment.  
 
