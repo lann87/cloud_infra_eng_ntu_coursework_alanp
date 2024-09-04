@@ -1,5 +1,5 @@
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)  
-# Assignment 2.14 - Principles in Cloud Architecture Design - Operational Excellence    
+# Assignment 2.15 - Principles in Cloud Architecture Design - Operational Excellence    
 ### Group Members: Alif Yusri, Stephen Tan, Azmi Maniku, Jun Jie Wong, Alan Peh, Shafiq Hussein    
 
 ## 1. What is Cloud Architecture Design - Operational Excellence?  
