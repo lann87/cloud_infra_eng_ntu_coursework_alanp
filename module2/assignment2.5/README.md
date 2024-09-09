@@ -1,28 +1,28 @@
-Assignment
-Brief
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)  
+# Assignment 2.5 - Deployment of RDS with Terraform.  
+## Individual - Brief  
 
-Objective:
+### Objective: The objective of this assignment is to gain a deeper understanding of AWS Database as a Service (DBaaS) offerings and how they can be used in different use cases.  
 
-The objective of this assignment is to gain a deeper understanding of AWS Database as a Service (DBaaS) offerings and how they can be used in different use cases.
+## 1: Research on AWS Databases  
 
-Instructions: Feel free to choose either of the two options below for your assignment:
+>    Research and investigate the various AWS DBaaS offerings, including RDS, DynamoDB, and Aurora.   
 
-Option 1: Research on AWS Databases
+### Amazon Relational Database Service(RDS)  
+- Managed relational database service.  
+- Supports multiple database engines: MySQL, PostgreSQL, Oracle, SQL Server, MariaDB and Amazon Aurora.  
+- Handles management tasks like provisioning, patching, backup, failure detection, recovery, and repair.  
+- Offers multi-AZ deployments, reading replicas, and automated backups.  
 
-    Research and investigate the various AWS DBaaS offerings, including RDS, DynamoDB, and Aurora.
-    Choose a specific use case (e.g. web application development, big data processing, machine learning) and determine which AWS DBaaS offering would be the most appropriate for that use case, providing a detailed explanation of your reasoning.
-    Write a sample project that demonstrates the use of one of the AWS DBaaS offerings and compare it with the other offerings.
-    Write a report summarizing your research, including a comparison and contrast of the different AWS DBaaS offerings, an analysis of the chosen use case, and any recommendations for improvement.
+### Amazon DynamoDB  
+- Fully managed NoSQL database services.
 
-Option 2: Create an AWS RDS
 
-    Create your RDS database on AWS with your individual name/ group name.
-    Explore more on AWS RDS by exploring this guide - https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateDBInstance.html
-    Submit your AWS Database name as part of this assignment.
 
-Submission
+## 2: Create an AWS RDS
 
-    Submit the URL of the GitHub Repository that contains your work to NTU black board.
-    Should you reference the work of your classmate(s) or online resources, give them credit by adding either the name of your classmate or URL.
-
-References
+### References:  
+[AWS RDS](https://aws.amazon.com/rds/features/)  
+[AWS DynamoDB](https://aws.amazon.com/dynamodb/features/)  
+[AWS Aurora MySQL/PostgreSQL](https://aws.amazon.com/rds/aurora/features/)  
+[Choosing the right AWS DB](https://www.projectpro.io/article/aws-databases-/904)
