@@ -1,6 +1,6 @@
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)  
 # Assignment 2.5 - Deployment of RDS with Terraform.  
-## Individual - Brief  
+## Individual - Alan Peh  
 
 ### Objective: The objective of this assignment is to gain a deeper understanding of AWS Database as a Service (DBaaS) offerings and how they can be used in different use cases.  
 
