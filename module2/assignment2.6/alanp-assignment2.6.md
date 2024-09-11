@@ -1,5 +1,6 @@
-# Cloud Engineering NTU SCTP - Assignment2.6
-Alan Peh Cohort 7  
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)  
+# Assignment2.6 - AWS IAM
+## Individual - Alan Peh  
 
 ## Brief
 The objective of this assignment is to gain a deeper understanding of AWS permissions and policies and how they can be used to secure access to AWS resources.

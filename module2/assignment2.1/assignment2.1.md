@@ -1,4 +1,5 @@
-# CE7 SCTP - Assignment 2.1
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)  
+# Assignment2.1 - AWS Cloud Computing
 ## Group 1 members: Alif Yusri, Azmi Maniku, Andy Liew, Alan Peh
 ### The objective of this assignment is to gain a deeper understanding of cloud computing, hybrid computing and traditional computing and the benefits and limitations of each.
 

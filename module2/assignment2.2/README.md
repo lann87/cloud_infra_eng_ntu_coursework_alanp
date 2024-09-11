@@ -1,4 +1,6 @@
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)  
 # NTU Cloud Engineering SCTP - Assignment2.2  
+## Individual Assignment - Alan Peh  
 
 The following assignment requires us to deploy ec2, vpc, setting routetable using terraform, we are exposed to HCL's variables, datablocks and various general best practices within the cloud industry.
   
