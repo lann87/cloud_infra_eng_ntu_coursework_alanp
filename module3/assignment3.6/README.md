@@ -7,13 +7,19 @@
 **Date**: 16 Oct  
 **Author**: Alan Peh  
 
-This project involves deploying a serverless application to AWS using the Serverless Framework. The application includes a simple website interacting with a DynamoDB table, and local testing is done with `serverless-offline`. Terraform is used to automate some parts of the deployment.
+This project involves deploying a serverless application to AWS using the Serverless Framework. The application includes a simple website interacting with a DynamoDB table, and local testing is done with `serverless-offline`. 
 
-Tools: AWS Lambda, API Gateway, DynamoDB, Serverless Framework, and Terraform.
+Tools: AWS Lambda, API Gateway, DynamoDB, and Serverless Framework.
 
 ## Deployment Files
 
-### index.js
+**index.js**  
+Contains the Lambda function that logs "Hello There! Alan" and returns a success message upon execution.  
+
+**serverless.yml**  
+Defines the service, AWS provider details, Lambda function configuration, HTTP API integration, and DynamoDB table resource with a single email attribute as the partition key.  
+
+**index.js**
 
 ```js
 module.exports.handler = async (event) => {
@@ -36,7 +42,7 @@ module.exports.handler = async (event) => {
 };
 ```
 
-### serverless.yml
+**serverless.yml**
 
 ```yml
 org: alanpntusctp # Organization name for Serverless framework
@@ -84,27 +90,33 @@ plugins:
 - serverless-offline # Plugin to run the Serverless framework locally for testing
 ```
 
-## Serverless Deployment
+## Successful Serverless Deployment
 
-### Application on serverless.com
-
+**Application on serverless.com**
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module3/assignment3.6/resources/16oct-serverless-websiteapp.png)
 
-### Curling the application hosted on CDK**
-
+**Curling the application hosted on CDK**
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module3/assignment3.6/resources/16oct-serverless-curl2.png)
 
 ## Serverless installation & deployment steps
 
-**Installation**
+**1. Installation**
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module3/assignment3.6/resources/16oct-serverless-serverlessinstallation.png)
 
-![Alt Text]()
+**2. Plugin Installation**
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module3/assignment3.6/resources/16oct-serverless-plugininstall.png)
 
-![Alt Text]()
+**3. Login into Serverless on CLI**
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module3/assignment3.6/resources/16oct-serverless-logincli.png)
 
-![Alt Text]()
+**4. Deployment of Application**
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module3/assignment3.6/resources/16oct-serverless-deploy.png)
 
+**5. Removal of Application**
+![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module3/assignment3.6/resources/16oct-serverless-remove.png)
 
+## Deployment Highlights
 
-
+- The Serverless Framework handles the deployment of AWS resources.  
+- A DynamoDB table (apusersTable) is provisioned with minimal read/write capacity for efficient data storage.  
+- Local testing is done with the serverless-offline plugin, ensuring development without full deployment.  
