@@ -20,7 +20,6 @@ Contains the Lambda function that logs "Hello There! Alan" and returns a success
 Defines the service, AWS provider details, Lambda function configuration, HTTP API integration, and DynamoDB table resource with a single email attribute as the partition key.  
 
 **index.js**
-
 ```js
 module.exports.handler = async (event) => {
     // write hello world to the logs
@@ -43,7 +42,6 @@ module.exports.handler = async (event) => {
 ```
 
 **serverless.yml**
-
 ```yml
 org: alanpntusctp # Organization name for Serverless framework
 app: ap-serverless-i # Application name in Serverless framework
