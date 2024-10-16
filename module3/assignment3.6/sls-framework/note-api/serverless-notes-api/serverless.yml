@@ -1,0 +1,72 @@
+service: serverless-notes-api
+provider:
+  name: aws
+  runtime: python3.9
+  stage: dev
+  region: us-east-1
+  profile: serverless
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/Notes"
+
+functions:
+  createNote:
+    handler: handler.create_note
+    events:
+      - http:
+          path: notes
+          method: post
+          cors: true
+  getNotes:
+    handler: handler.get_notes
+    events:
+      - http:
+          path: notes
+          method: get
+          cors: true
+  getNoteById:
+    handler: handler.get_note_by_id
+    events:
+      - http:
+          path: notes/{id}
+          method: get
+          cors: true
+  updateNote:
+    handler: handler.update_note
+    events:
+      - http:
+          path: notes/{id}
+          method: put
+          cors: true
+  deleteNote:
+    handler: handler.delete_note
+    events:
+      - http:
+          path: notes/{id}
+          method: delete
+          cors: true
+
+resources:
+  Resources:
+    NotesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Notes
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

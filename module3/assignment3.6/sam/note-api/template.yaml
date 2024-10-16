@@ -1,0 +1,126 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Notes API
+Globals:
+  Function:
+    Timeout: 10
+Resources:
+  GenericLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaRole'
+        - 'arn:aws:iam::aws:policy/AWSLambdaExecute'
+        - 'arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess'
+        - 'arn:aws:iam::aws:policy/AmazonSQSFullAccess'
+        - 'arn:aws:iam::aws:policy/AmazonS3FullAccess'
+        - 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess'
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - 'lambda.amazonaws.com'
+            Action:
+              - 'sts:AssumeRole'
+  NotesTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+        Name: id
+        Type: String
+      TableName: Notes
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+  
+  CreateNoteFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: !GetAtt GenericLambdaRole.Arn
+      CodeUri: notes_api/
+      Handler: app.create_note
+      Runtime: python3.8
+      Events:
+        CreateNoteApi:
+          Type: Api
+          Properties:
+            Path: /notes
+            Method: post
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref NotesTable
+
+  GetNotesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: !GetAtt GenericLambdaRole.Arn
+      CodeUri: notes_api/
+      Handler: app.get_notes
+      Runtime: python3.8
+      Events:
+        GetNotesApi:
+          Type: Api
+          Properties:
+            Path: /notes
+            Method: get
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref NotesTable
+
+  GetNoteByIdFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: !GetAtt GenericLambdaRole.Arn
+      CodeUri: notes_api/
+      Handler: app.get_note_by_id
+      Runtime: python3.8
+      Events:
+        GetNoteByIdApi:
+          Type: Api
+          Properties:
+            Path: /notes/{id}
+            Method: get
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref NotesTable
+
+  UpdateNoteFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: !GetAtt GenericLambdaRole.Arn
+      CodeUri: notes_api/
+      Handler: app.update_note
+      Runtime: python3.8
+      Events:
+        UpdateNoteApi:
+          Type: Api
+          Properties:
+            Path: /notes/{id}
+            Method: put
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref NotesTable
+
+  DeleteNoteFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: !GetAtt GenericLambdaRole.Arn
+      CodeUri: notes_api/
+      Handler: app.delete_note
+      Runtime: python3.8
+      Events:
+        DeleteNoteApi:
+          Type: Api
+          Properties:
+            Path: /notes/{id}
+            Method: delete
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref NotesTable
+
+Outputs:
+  ApiGatewayRestApi:
+    Description: API Gateway REST API
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"

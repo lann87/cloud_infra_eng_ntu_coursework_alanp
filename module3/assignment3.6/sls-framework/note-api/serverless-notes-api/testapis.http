@@ -1,0 +1,43 @@
+# createNote
+POST https://3b7cj8roqh.execute-api.us-east-1.amazonaws.com/dev/notes HTTP/1.1
+content-type: application/json
+
+{
+    "id": "4",
+    "content": "My forth note",
+    "createdAt": "2023-04-20T07:07:07.000Z"
+}
+
+###
+###
+
+# getNotes
+GET https://3b7cj8roqh.execute-api.us-east-1.amazonaws.com/dev/notes HTTP/1.1
+
+###
+###
+
+# getNotesById
+GET https://3b7cj8roqh.execute-api.us-east-1.amazonaws.com/dev/notes/3 HTTP/1.1
+
+###
+###
+
+# updateNote
+PUT https://3b7cj8roqh.execute-api.us-east-1.amazonaws.com/dev/notes/3 HTTP/1.1
+content-type: application/json
+
+{
+    "id": "3",
+    "content": "My third note updated",
+    "createdAt": "2023-04-20T07:07:07.000Z"
+}
+###
+###
+
+# deleteNote
+
+DELETE https://n9bspxqbc4.execute-api.us-east-1.amazonaws.com/dev/notes/1 HTTP/1.1
+
+###
+###

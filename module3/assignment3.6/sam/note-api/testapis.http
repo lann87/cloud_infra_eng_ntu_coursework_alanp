@@ -1,0 +1,44 @@
+# createNote
+POST https://4anhua9igi.execute-api.ap-southeast-1.amazonaws.com/Prod/notes HTTP/1.1
+content-type: application/json
+
+{
+    "id": "2",
+    "content": "My second note",
+    "createdAt": "2023-04-20T07:07:07.000Z"
+}
+
+###
+###
+
+# getNotes
+GET https://4anhua9igi.execute-api.ap-southeast-1.amazonaws.com/Prod/notes HTTP/1.1
+
+###
+###
+
+# getNotesById
+GET https://4anhua9igi.execute-api.ap-southeast-1.amazonaws.com/Prod/notes/1 HTTP/1.1
+
+###
+###
+
+# updateNote
+PUT https://4anhua9igi.execute-api.ap-southeast-1.amazonaws.com/Prod/notes/1 HTTP/1.1
+content-type: application/json
+
+{
+    "id": "1",
+    "content": "My updated note",
+    "createdAt": "2023-04-20T07:07:07.000Z"
+}
+
+###
+###
+
+# deleteNote
+
+DELETE https://4anhua9igi.execute-api.ap-southeast-1.amazonaws.com/Prod/notes/1 HTTP/1.1
+
+###
+###
