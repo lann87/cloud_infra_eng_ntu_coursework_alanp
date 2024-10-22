@@ -28,7 +28,7 @@ Tools: Serverless Framework, AWS Lambda, AWS S3, AWS CloudWatch, and Node.js.
 ![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-start.png)
 
 **2. Deployment**
-![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-ci.png)
+![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-ci-deploy.png)
 
 **3. Removal of Application**
 ![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-remove.png)
