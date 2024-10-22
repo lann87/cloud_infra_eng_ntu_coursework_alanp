@@ -168,3 +168,5 @@ docker_startup.sh
 
 
 .terraform/
+
+./classroom_f2f

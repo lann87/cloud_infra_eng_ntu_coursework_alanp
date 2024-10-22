@@ -7,19 +7,27 @@
 **Date**: 21 Oct  
 **Author**: Alan Peh  
 
-This project involves deploying a serverless application to AWS using the Serverless Framework. The application includes a simple website interacting with a DynamoDB table, and local testing is done with `serverless-offline`.  
+This assignment focuses on creating a Serverless Cloud Native Application using AWS Lambda, S3, and CloudWatch.  
+The application processes CSV files uploaded to an S3 bucket, converts them into fixed-width format using a predefined schema, and stores the converted files in another S3 bucket.  
+The entire process is automated using AWS Lambda functions and can be monitored through CloudWatch Logs.  
 
-Tools: AWS Lambda, API Gateway, DynamoDB, and Serverless Framework.
+Tools: Serverless Framework, AWS Lambda, AWS S3, AWS CloudWatch, and Node.js.  
 
 ## Deployment Files
 
-**index.js**  
-Contains the Lambda function that logs "Hello There! Alan" and returns a success message upon execution.  
+**handler.js**  
+
+This file contains the Lambda function that processes CSV files uploaded to S3. It reads the file, parses the CSV content using the library, transforms the data into a fixed-width format using schema defined in schema.js, and uploads the transformed file back to another S3 bucket.  
+
+**schema.js**  
+
+This file defines the fixed-width format for each field of the data. It specifies the width of each column (e.g., 20 characters for First and Last names, 50 for Email), and ensures that each field is padded with spaces to fit the required width.  
 
 **serverless.yml**  
-Defines the service, AWS provider details, Lambda function configuration, HTTP API integration, and DynamoDB table resource with a single email attribute as the partition key.  
 
-**handler.js**
+"Help me explain this file simply"  
+
+**handler.js**  
 
 ```js
 'use strict'
@@ -88,7 +96,7 @@ module.exports.processCSV = async (event, context) => {
 }
 ```
 
-**schema.js**
+**schema.js**  
 
 ```js
 // Default configuration for all fields - sets padding settings
@@ -131,7 +139,7 @@ Total width of each record: 108 characters
 */
 ```
 
-**serverless.yml**
+**serverless.yml**  
 
 ```yml
 # Main service name
@@ -203,9 +211,8 @@ resources:
 **3. Removal of Application**
 ![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-remove.png)
 
-
 ## Deployment Highlights
 
-- The Serverless Framework handles the deployment of AWS resources.  
-- A DynamoDB table (apusersTable) is provisioned with minimal read/write capacity for efficient data storage.  
-- Local testing is done with the serverless-offline plugin, ensuring development without full deployment.  
+- The processCSV function is triggered whenever a CSV file is uploaded to the input S3 bucket. The file is transformed and saved to the output bucket.  
+
+- CloudWatch Logs are used to monitor the Lambda function’s execution and track any errors that occur during the CSV processing.  
