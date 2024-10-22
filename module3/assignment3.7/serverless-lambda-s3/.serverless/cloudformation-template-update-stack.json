@@ -1,0 +1,219 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "The AWS CloudFormation template for this Serverless application",
+  "Resources": {
+    "ProcessCSVLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/alanprocessCSV"
+      }
+    },
+    "IamRoleLambdaExecution": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": {
+              "Fn::Join": [
+                "-",
+                [
+                  "alan-serverless-lambda-s3",
+                  "production",
+                  "lambda"
+                ]
+              ]
+            },
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogStream",
+                    "logs:CreateLogGroup",
+                    "logs:TagResource"
+                  ],
+                  "Resource": [
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/alanprocessCSV:*"
+                    }
+                  ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:PutLogEvents"
+                  ],
+                  "Resource": [
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/alanprocessCSV:*:*"
+                    }
+                  ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:*"
+                  ],
+                  "Resource": "*"
+                }
+              ]
+            }
+          }
+        ],
+        "Path": "/",
+        "RoleName": {
+          "Fn::Join": [
+            "-",
+            [
+              "alan-serverless-lambda-s3",
+              "production",
+              {
+                "Ref": "AWS::Region"
+              },
+              "lambdaRole"
+            ]
+          ]
+        }
+      }
+    },
+    "ProcessCSVLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-us-east-1-16e5ae2d-37ea",
+          "S3Key": "serverless/alan-serverless-lambda-s3/production/1729517662232-2024-10-21T13:34:22.232Z/alan-serverless-lambda-s3.zip"
+        },
+        "Handler": "handler.processCSV",
+        "Runtime": "nodejs18.x",
+        "FunctionName": "alanprocessCSV",
+        "MemorySize": 1024,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "FIXED_WIDTH_BUCKET": "alan-serverless-bucket-output",
+            "NODE_ENV": "production"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "ProcessCSVLogGroup"
+      ]
+    },
+    "ProcessCSVLambdaVersion36r7HdzryzCJ34YgJ8oblTGDSnJ9HW0B9YI8GhueHY": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ProcessCSVLambdaFunction"
+        },
+        "CodeSha256": "vYheDnnvuLn+2Yh9GcyKmLdw8B3lQg886DnB2lP3GRE="
+      }
+    },
+    "S3BucketAlanserverlessbucketinput": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "alan-serverless-bucket-input",
+        "NotificationConfiguration": {
+          "LambdaConfigurations": [
+            {
+              "Event": "s3:ObjectCreated:*",
+              "Function": {
+                "Fn::GetAtt": [
+                  "ProcessCSVLambdaFunction",
+                  "Arn"
+                ]
+              },
+              "Filter": {
+                "S3Key": {
+                  "Rules": [
+                    {
+                      "Name": "suffix",
+                      "Value": ".csv"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "DependsOn": [
+        "ProcessCSVLambdaPermissionAlanserverlessbucketinputS3"
+      ]
+    },
+    "ProcessCSVLambdaPermissionAlanserverlessbucketinputS3": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "ProcessCSVLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "s3.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":s3:::alan-serverless-bucket-input"
+            ]
+          ]
+        },
+        "SourceAccount": {
+          "Ref": "AWS::AccountId"
+        }
+      }
+    },
+    "fixedwidth": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "alan-serverless-bucket-output"
+      }
+    }
+  },
+  "Outputs": {
+    "ServerlessDeploymentBucketName": {
+      "Value": "serverless-framework-deployments-us-east-1-16e5ae2d-37ea",
+      "Export": {
+        "Name": "sls-alan-serverless-lambda-s3-production-ServerlessDeploymentBucketName"
+      }
+    },
+    "ProcessCSVLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "ProcessCSVLambdaVersion36r7HdzryzCJ34YgJ8oblTGDSnJ9HW0B9YI8GhueHY"
+      },
+      "Export": {
+        "Name": "sls-alan-serverless-lambda-s3-production-ProcessCSVLambdaFunctionQualifiedArn"
+      }
+    }
+  }
+}

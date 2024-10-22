@@ -1,0 +1,45 @@
+{
+  "name": "serverless-lambda-s3",
+  "version": "1.0.0",
+  "description": "This project demonstrates how the Serverless Framework can be used to deploy a NodeJS Lambda function that responds to events in an S3 bucket.",
+  "main": "handler.js",
+  "scripts": {
+    "format": "prettier --write '**/**.{js,json,css,md}'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "serverless",
+    "framework",
+    "aws",
+    "lambda",
+    "node",
+    "s3",
+    "csv",
+    "fixed",
+    "flat"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fixy": "^1.2.0",
+    "papaparse": "^4.6.3"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.424.0",
+    "dotenv": "^7.0.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/**.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

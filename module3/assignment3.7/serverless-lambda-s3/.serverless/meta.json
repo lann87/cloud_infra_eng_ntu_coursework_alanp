@@ -1,0 +1,197 @@
+{
+  "/home/alann/Documents/Learning/CloudEngineering_NTU/services-cloudeng/cloud-native/Cloud-native-application-II-lambda/serverless-lambda-s3": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.6",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "self": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "alan-serverless-lambda-s3",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs18.x",
+              "region": "us-east-1",
+              "stage": "production",
+              "iam": {
+                "role": {
+                  "statements": [
+                    {
+                      "Effect": "Allow",
+                      "Action": [
+                        "s3:*"
+                      ],
+                      "Resource": "*"
+                    }
+                  ]
+                }
+              },
+              "versionFunctions": true
+            },
+            "functions": {
+              "processCSV": {
+                "name": "alanprocessCSV",
+                "handler": "handler.processCSV",
+                "events": [
+                  {
+                    "s3": {
+                      "bucket": "alan-serverless-bucket-input",
+                      "event": "s3:ObjectCreated:*",
+                      "rules": [
+                        {
+                          "suffix": ".csv"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "environment": {
+                  "FIXED_WIDTH_BUCKET": "alan-serverless-bucket-output",
+                  "NODE_ENV": "production"
+                }
+              }
+            },
+            "resources": {
+              "Resources": {
+                "fixedwidth": {
+                  "Type": "AWS::S3::Bucket",
+                  "Properties": {
+                    "BucketName": "alan-serverless-bucket-output"
+                  }
+                }
+              }
+            }
+          },
+          "configFileDirPath": "/home/alann/Documents/Learning/CloudEngineering_NTU/services-cloudeng/cloud-native/Cloud-native-application-II-lambda/serverless-lambda-s3",
+          "config": {
+            "type": "self"
+          },
+          "options": {},
+          "stage": "production",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:self",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "/home/alann/Documents/Learning/CloudEngineering_NTU/services-cloudeng/cloud-native/Cloud-native-application-II-lambda/serverless-lambda-s3",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "alan-serverless-lambda-s3",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "region": "us-east-1",
+        "stage": "production",
+        "iam": {
+          "role": {
+            "statements": [
+              {
+                "Effect": "Allow",
+                "Action": [
+                  "s3:*"
+                ],
+                "Resource": "*"
+              }
+            ]
+          }
+        },
+        "versionFunctions": true
+      },
+      "functions": {
+        "processCSV": {
+          "name": "alanprocessCSV",
+          "handler": "handler.processCSV",
+          "events": [
+            {
+              "s3": {
+                "bucket": "alan-serverless-bucket-input",
+                "event": "s3:ObjectCreated:*",
+                "rules": [
+                  {
+                    "suffix": ".csv"
+                  }
+                ]
+              }
+            }
+          ],
+          "environment": {
+            "FIXED_WIDTH_BUCKET": "alan-serverless-bucket-output",
+            "NODE_ENV": "production"
+          }
+        }
+      },
+      "resources": {
+        "Resources": {
+          "fixedwidth": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+              "BucketName": "alan-serverless-bucket-output"
+            }
+          }
+        }
+      }
+    },
+    "serviceRawFile": "service: alan-serverless-lambda-s3\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  region: us-east-1\n  stage: production\n  iam:\n    role:\n      statements:\n      - Effect: Allow\n        Action:\n        - s3:*\n        Resource: \"*\"\n\nfunctions:\n  processCSV:\n    name: alanprocessCSV\n    handler: handler.processCSV\n    events:\n    - s3:\n        bucket: alan-serverless-bucket-input\n        event: s3:ObjectCreated:*\n        rules:\n        - suffix: .csv\n    environment:\n      FIXED_WIDTH_BUCKET: ${self:resources.Resources.fixedwidth.Properties.BucketName}\n      NODE_ENV: production\n\nresources:\n  Resources:\n    fixedwidth:\n      Type: AWS::S3::Bucket\n      Properties:\n        BucketName: alan-serverless-bucket-output\n",
+    "command": [
+      "remove"
+    ],
+    "options": {},
+    "error": null,
+    "params": {},
+    "machineId": "c2ab7c514ab49004dcf85fc187b1175c",
+    "stage": "production",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "bfaa20ef-d232-4bfd-a0fd-816d803b565f",
+    "orgName": "alanpntusctp",
+    "userId": "0VxFvKdMph7KGKgPfb",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "alanpntusctp",
+    "subscription": null,
+    "userEmail": "alanpeh87@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "255945442255",
+    "projectType": "traditional",
+    "versionSf": "4.4.6",
+    "serviceProviderAwsCfStackName": "alan-serverless-lambda-s3-production",
+    "serviceUniqueId": "arn:aws:cloudformation:us-east-1:255945442255:stack/alan-serverless-lambda-s3-production/7583dec0-8faf-11ef-a249-1252e60fd6ed",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:255945442255:stack/alan-serverless-lambda-s3-production/7583dec0-8faf-11ef-a249-1252e60fd6ed",
+    "serviceProviderAwsCfStackCreated": "2024-10-21T13:22:02.664Z",
+    "serviceProviderAwsCfStackUpdated": "2024-10-21T13:36:05.018Z",
+    "serviceProviderAwsCfStackStatus": "DELETE_FAILED",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-us-east-1-16e5ae2d-37ea",
+        "ExportName": "sls-alan-serverless-lambda-s3-production-ServerlessDeploymentBucketName"
+      },
+      {
+        "OutputKey": "ProcessCSVLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:255945442255:function:alanprocessCSV:2",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-alan-serverless-lambda-s3-production-ProcessCSVLambdaFunctionQualifiedArn"
+      }
+    ],
+    "integrations": {}
+  }
+}

@@ -1,0 +1,47 @@
+# Main service name
+service: alan-serverless-lambda-s3
+
+# AWS provider configuration
+provider:
+  name: aws
+  runtime: nodejs18.x # Using Node.js 18 runtime
+  region: us-east-1 # Deploy to US East 1 region
+  stage: production # Deployment stage
+
+  # IAM role configuration for Lambda
+  iam:
+    role:
+      statements:
+      # Grant full S3 permissions to Lambda
+      - Effect: Allow
+        Action:
+        - s3:*
+        Resource: "*" # Allows access to all S3 resources
+
+# Lambda function definitions
+functions:
+  processCSV:
+    name: alanprocessCSV
+    handler: handler.processCSV # Points to processCSV function in handler.js
+    events:
+    # Trigger Lambda when new files are created in S3
+    - s3:
+        bucket: alan-serverless-bucket-input
+        event: s3:ObjectCreated:*
+        rules:
+        - suffix: .csv # Only trigger for CSV files
+
+    # Environment variables available to Lambda
+    environment:
+      # Reference to output bucket name defined below
+      FIXED_WIDTH_BUCKET: ${self:resources.Resources.fixedwidth.Properties.BucketName}
+      NODE_ENV: production
+
+# AWS Resources to be created
+resources:
+  Resources:
+    # Output S3 bucket definition
+    fixedwidth:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: alan-serverless-bucket-output
