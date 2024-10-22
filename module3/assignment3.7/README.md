@@ -13,6 +13,26 @@ The entire process is automated using AWS Lambda functions and can be monitored 
 
 Tools: Serverless Framework, AWS Lambda, AWS S3, AWS CloudWatch, and Node.js.  
 
+## Cloudwatch and Lambda function in operation on S3 bucket
+
+**Cloudwatch Logs**
+![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cloudwatch-logs.png)
+
+**S3 bucket input/output**
+![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-bucket-input.png)  
+![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-bucket-output.png)
+
+## Installation & deployment steps
+
+**1. Installation**
+![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-start.png)
+
+**2. Deployment**
+![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-ci.png)
+
+**3. Removal of Application**
+![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-remove.png)
+
 ## Deployment Files
 
 **handler.js**  
@@ -25,7 +45,7 @@ This file defines the fixed-width format for each field of the data. It specifie
 
 **serverless.yml**  
 
-"Help me explain this file simply"  
+This is the configuration file for the Serverless Framework. It defines the service, the AWS provider, Lambda functions, and resources to be created (like S3 buckets). It specifies the events (file uploads) that trigger the Lambda function, and the environment variables used in the Lambda function.  
 
 **handler.js**  
 
@@ -190,26 +210,6 @@ resources:
       Properties:
         BucketName: alan-serverless-bucket-output
 ```
-
-## Cloudwatch and Lambda function on S3 bucket
-
-**Cloudwatch Logs**
-![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cloudwatch-logs.png)
-
-**S3 bucket input/output**
-![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-bucket-input.png)  
-![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-bucket-output.png)
-
-## Installation & deployment steps
-
-**1. Installation**
-![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-start.png)
-
-**2. Deployment**
-![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-ci.png)
-
-**3. Removal of Application**
-![Alt Text](https://github.com/lann87/Cloud-native-application-II-lambda/blob/main/resource/as3-7-serverless-cli-remove.png)
 
 ## Deployment Highlights
 
