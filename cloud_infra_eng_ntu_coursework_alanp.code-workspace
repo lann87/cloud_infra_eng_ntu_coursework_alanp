@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../services-cloudeng"
+		},
+		{
+			"path": "../grp2-capstone"
 		}
 	],
 	"settings": {}

@@ -1,0 +1,22 @@
+{
+  "name": "simple-node-app-7oct",
+  "version": "1.0.0",
+  "description": "a cloud native deployment with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lann87/cloudnative-deployment-7oct.git"
+  },
+  "author": "alanp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lann87/cloudnative-deployment-7oct/issues"
+  },
+  "homepage": "https://github.com/lann87/cloudnative-deployment-7oct#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

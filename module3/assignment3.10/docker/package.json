@@ -1,0 +1,28 @@
+{
+    "name": "simple-cicd-pipeline",
+    "version": "1.0.0",
+    "description": "cicd for ecs",
+    "main": "index.js",
+    "scripts": {
+      "test": "jest --runInBand --detectOpenHandles --forceExit"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/luqmannnn/simple-cicd-pipeline.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/luqmannnn/simple-cicd-pipeline/issues"
+    },
+    "homepage": "https://github.com/luqmannnn/simple-cicd-pipeline#readme",
+    "dependencies": {
+      "express": "^4.19.2"
+    },
+    "devDependencies": {
+      "chai": "^5.1.1",
+      "jest": "^29.7.0",
+      "mocha": "^10.4.0",
+      "supertest": "^7.0.0"
+    }
+  }
