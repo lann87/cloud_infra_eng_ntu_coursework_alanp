@@ -8,13 +8,13 @@ Group Members: Azmi Maniku, Lovell Tan, Wong Teck Choy, Alan Peh
 
 Overcoming Design Complexity  
 Achieving Data Consistency  
-**Need for Testing and Monitoring**  
+**> Need for Testing and Monitoring**  
 Debugging Issues  
 Compromised Security  
 Increased Operational Complexity  
 Inter-Service Communication Breakdown  
-**Requires Team Expertise**  
-**Maintenance of Microservices**  
+**> Requires Team Expertise**  
+**> Maintenance of Microservices**  
 Network Management  
 
 ### Choose 3 challenges and break down the solution to how to solve them.  
