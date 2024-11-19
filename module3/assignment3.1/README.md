@@ -1,8 +1,11 @@
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)  
 
-# Assignment 3.1 - Introduction to GIT I
+# Assignment 3.1 - Introduction to GIT I  
 
-## GIT Commands  
+## Individual Assignment - GIT Commands  
+
+**Date**: 30 Sep  
+**Author**: Alan Peh  
 
 ## Commonly used GIT commands  
 
