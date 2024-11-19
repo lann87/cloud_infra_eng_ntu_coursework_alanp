@@ -7,9 +7,12 @@
 **Date**: 07 Oct  
 **Author**: Alan Peh  
 
-## Quick Implementation Guide
+## Deployment of Node JS application
 
-### Development Setup Steps
+**Deployed and Curled using CLI**  
+![!Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/module3/assignment3.3/resource/a3.3-node-cli-curl.png)
+
+### Dev Steps
 
 1. **Create & Clone Repository**
 
