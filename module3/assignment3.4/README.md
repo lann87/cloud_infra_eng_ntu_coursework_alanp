@@ -1,6 +1,6 @@
 ![Alt Text](https://github.com/lann87/cloud_infra_eng_ntu_coursework_alanp/blob/main/.misc/ntu_logo.png)  
 
-# Assignment 3.4 - Deploying Node.js App to AWS EC2
+# Assignment 3.4 - Cloud Native Application Containerization I
 
 ## Individual Assignment - Docker and EC2 Deployment using Terraform
 
