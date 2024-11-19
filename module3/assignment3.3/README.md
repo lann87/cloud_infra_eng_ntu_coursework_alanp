@@ -7,6 +7,8 @@
 **Date**: 07 Oct  
 **Author**: Alan Peh  
 
+**In this assignment, we created a basic Node.js web application using Express framework and implemented a simple CI/CD pipeline using GitHub Actions. The application was containerized using Docker and tested locally, demonstrating fundamental web application development and container deployment practices.**  
+
 ## Deployment of Node JS application
 
 **Deployed and Curled using CLI**  
@@ -63,7 +65,7 @@
 4. **Test & Deploy**  
 
    - Start app: `node index.js`
-   - Visit: http://localhost:3000
+   - Visit: http://localhost:8082
 
 5. **Git Workflow**  
 
@@ -76,7 +78,9 @@
    - `git push origin main`  
    - `git pull origin main`  
 
-**Simple Docker Check**  
+## Simple Code checks  
+
+**docker-check.yaml**  
 
 ```yaml
 name: Docker CI
@@ -117,16 +121,6 @@ jobs:
 
     - name: Docker Container Testing
       run: docker run . -t
-```
-
-## Project Structure  
-
-```sh
-your-project/
-├── node_modules/
-├── index.js
-├── package.json
-└── package-lock.json
 ```
 
 ## Best Practices  
