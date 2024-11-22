@@ -1,0 +1,23 @@
+name: Checkov
+
+on:
+    pull_request:
+        branches: ["main"]  # Trigger the workflow for pull requests targeting the 'main' branch
+        paths:
+            - 'terraform/*'  # Only trigger the workflow when files within the 'terraform' directory are modified
+
+jobs:
+    Checkov:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: terraform  # Set the working directory to 'terraform' for the steps below
+
+        steps:
+        -   name: Checkov  # Step to check out the code from the repository
+            uses: actions/checkout@v3  # Uses GitHub's official checkout action to pull the code
+
+        -   name: Checkov  # Step to run Checkov to perform static analysis on Terraform code
+            uses: bridgecrewio/checkov-action@master  # Uses the official Checkov GitHub action
+            with:
+                framework: terraform  # Specifies that Checkov should analyze Terraform code

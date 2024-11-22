@@ -1,0 +1,57 @@
+name: Terraform CI
+
+# Trigger this workflow on pull requests to the main branch, only when files in the terraform directory change
+on:
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'terraform/*'
+
+jobs:
+  Terraform-Checks:
+    runs-on: ubuntu-latest
+
+    # Set the working directory for all run commands to the terraform directory
+    defaults:
+      run:
+        working-directory: terraform
+
+    steps:
+      # Check out the repository's code
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Set up Terraform for use in the workflow
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
+      # Check Terraform code formatting
+      - name: Terraform fmt check
+        id: fmt
+        run: terraform fmt -check
+
+      # Initialize Terraform without configuring the backend
+      - name: Terraform init
+        run: terraform init -backend=false
+
+      # Validate the Terraform configuration
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
+
+      # Set up TFLint for Terraform linting
+      - uses: terraform-linters/setup-tflint@v3
+        with:
+          tflint_version: latest
+
+      # Show the installed TFLint version
+      - name: Show version
+        run: tflint --version
+
+      # Initialize TFLint to download rules and configure it
+      - name: Init TFLint
+        run: tflint --init
+
+      # Run TFLint to check for issues in Terraform code
+      - name: Run TFLint
+        run: tflint -f compact

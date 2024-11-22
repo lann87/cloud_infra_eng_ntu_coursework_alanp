@@ -1,0 +1,42 @@
+name: Terraform CD
+
+# Trigger this workflow on pull requests to the main branch, only when files in the terraform directory change
+on:
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'terraform/*'
+
+jobs:
+  Terraform-Plan:
+    runs-on: ubuntu-latest
+
+    # Set the working directory for all run commands to the terraform directory
+    defaults:
+      run:
+        working-directory: terraform
+
+    steps:
+      # Check out the repository's code
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Set up Terraform for use in the workflow
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      # Configure AWS credentials using secrets for authentication
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      # Initialize Terraform, setting up the environment and loading configurations
+      - name: Terraform Init
+        run: terraform init
+
+      # Generate and display the Terraform execution plan
+      - name: Terraform Plan
+        run: terraform plan
