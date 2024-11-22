@@ -1,0 +1,29 @@
+name: Snyk Container Security Scan
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  snyk-scan:
+    runs-on: ubuntu-latest
+    steps:
+      # Get the code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Build using your Python Dockerfile
+      - name: Build Docker image
+        run: docker build -t python-hello:${{ github.sha }} -f Dockerfile .
+
+      # Scan the built image with Snyk
+      - name: Run Snyk Container Scan
+        uses: snyk/actions/docker@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          image: python-hello:${{ github.sha }}
+          args: --file=Dockerfile --severity-threshold=medium
+        continue-on-error: true  # Don't fail on low severity issues
